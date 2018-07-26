@@ -53,9 +53,10 @@ function updateTable() {
 
     //copy pasta of 14.3.03-Evr_D3_Table   mmmm pasta
     tableData.forEach((element) => {
-        mesa.append("tr");
+        var row = mesa.append("tr");
+
         Object.entries(element).forEach(([key, value]) => {
-          var cell = mesa.append("td");
+          var cell = row.append("td");
           cell.text(value);
         });
     }); 
