@@ -30,20 +30,20 @@ function updateTable() {
     // from data.js
     var tableData = data;
 
-    //filter elements
-    if(inputDate.property("value"))   
+    //filter elements  ///also checks for strings with only spaces ||.replace(/\s/g, '')||
+    if(inputDate.property("value").replace(/\s/g, ''))   
         tableData = tableData.filter( element => (element.datetime===inputDate.property("value")) );
 
-    if(inputCity.property("value"))   
+    if(inputCity.property("value").replace(/\s/g, ''))   
         tableData = tableData.filter( element => (element.city===inputCity.property("value")) );
 
-    if(inputState.property("value"))   
+    if(inputState.property("value").replace(/\s/g, ''))   
         tableData = tableData.filter( element => (element.state===inputState.property("value")) );
     
-    if(inputCountry.property("value"))   
+    if(inputCountry.property("value").replace(/\s/g, ''))   
         tableData = tableData.filter( element => (element.country===inputCountry.property("value")) );
 
-    if(inputShape.property("value"))   
+    if(inputShape.property("value").replace(/\s/g, ''))   
         tableData = tableData.filter( element => (element.shape===inputShape.property("value")) );
 
 
