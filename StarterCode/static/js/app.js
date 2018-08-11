@@ -31,19 +31,19 @@ function updateTable() {
     var tableData = data;
 
     //filter elements
-    if(!(inputDate.property("value")==false))   // if inputbox is not empty apply filter using magic of ==
+    if(inputDate.property("value"))   
         tableData = tableData.filter( element => (element.datetime===inputDate.property("value")) );
 
-    if(!(inputCity.property("value")==false))   // if inputbox is not empty apply filter using magic of ==
+    if(inputCity.property("value"))   
         tableData = tableData.filter( element => (element.city===inputCity.property("value")) );
 
-    if(!(inputState.property("value")==false))   // if inputbox is not empty apply filter using magic of ==
+    if(inputState.property("value"))   
         tableData = tableData.filter( element => (element.state===inputState.property("value")) );
     
-    if(!(inputCountry.property("value")==false))   // if inputbox is not empty apply filter using magic of ==
+    if(inputCountry.property("value"))   
         tableData = tableData.filter( element => (element.country===inputCountry.property("value")) );
 
-    if(!(inputShape.property("value")==false))   // if inputbox is not empty apply filter using magic of ==
+    if(inputShape.property("value"))   
         tableData = tableData.filter( element => (element.shape===inputShape.property("value")) );
 
 
